@@ -1,0 +1,193 @@
+/* Importing Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+}
+
+body {
+    background-color: #89C15E;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.headercontent {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.headercontent .title {
+    width: 50%;
+    font-size: 35px;
+    color: #fff;
+    word-spacing: 9999999px;
+}
+
+.result {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.card{
+    width: 40%;
+    background-color: #fff;
+    padding: 10px;
+    word-spacing: 9999999px; 
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    min-height: 90px;
+}
+
+.cardTitle {
+    font-size: 20px;
+    text-align: center;
+}
+
+.card b {
+    font-size: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 42%;
+}
+
+footer {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    color: #fff;
+}
+
+footer .button {
+    background-color: none;
+    border: 2px solid #fff;
+    z-index: -2;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.footercard {
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    display: none;
+}
+
+.footercard .close {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: #000;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    background-color: red;
+    text-align: center;
+    padding: 2px 10px; 
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+} 
+
+.gamerule {
+    background-color: #004429;
+    width: 275px;
+    margin-right: 20px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 7px solid #fff;
+}
+
+.gamerule h2 {
+    text-align: center;
+}
+
+.gamerule ul {
+    list-style-type: square;
+}
+
+.gamerule li {
+    margin: 15px 0px;
+    color: yellow;
+}
+
+.gamerule li span {
+    color: #fff;
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 1140px) {
+    .headercontent {
+        width: 60%;
+    }
+
+    .headercontent .title {
+        width: 40%;
+    }
+
+    .headercontent .result {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .headercontent {
+        width: 80%;
+    }
+
+    .headercontent .title {
+        font-size: 30px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .card b {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .headercontent {
+        display: block;
+        padding: 10px 10px;
+    }
+
+    .headercontent .title {
+        width: 100%;
+        word-spacing: 10px;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .headercontent .result {
+        width: 100%;
+    }
+
+    .card {
+        width: 40%;
+        margin-top: 15px;
+    }
+
+    .cardTitle {
+        font-size: 18px;
+    }
+
+    .card b {
+        font-size: 40px;
+    } 
+}
