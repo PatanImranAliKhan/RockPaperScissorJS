@@ -2,6 +2,8 @@ const gameRuleCard = document.getElementById("gameRuleCard")
 
 const ruleButton = document.getElementById("ruleButton")
 
+const nextButton = document.getElementById("nextButton")
+
 const gameRuleCloseIcon = document.getElementById("gameRuleCloseIcon")
 
 const playAgain = document.getElementById("playagain");
@@ -19,4 +21,9 @@ gameRuleCloseIcon.addEventListener("click", () => {
 
 playAgain.addEventListener("click", () => {
     window.location.href = "index.html"
+})
+
+nextButton.addEventListener("click", () => {
+    console.log("click")
+    window.location.href = "hurray_page.html"
 })

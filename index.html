@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissor</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="play.css" />
 </head>
 
 <body>
@@ -33,35 +34,85 @@
             </div>
         </header>
         <main>
-            <div>
-
+            <div class="game" id="game">
+                <div class="playgame">
+                    <div class="triangle">
+                        <img class="triangleimage" src="./images/triangle.svg" height="40%" alt="" />
+                        <div class="rockpaperscissor">
+                            <div class="resimage rock" id="rock">
+                                <img src="./images/rock.png" alt="Rock" />
+                            </div>
+                            <div class="resimage scissor" id="scissor">
+                                <img src="./images/scissor.png" alt="Scissor" />
+                            </div>
+                            <div class="resimage paper" id="paper">
+                                <img src="./images/paper.png" alt="Paper" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="winningResult">
-
+            <br />
+            <div class="winningResult" id="winningResult">
+                <div class="myresult">
+                    <h5>YOU PICKED</h5>
+                    <br />
+                    <div class="resimage paper" id="myPick">
+                        <img src="./images/paper.png" id="myPickImage" alt="My Result" />
+                    </div>
+                </div>
+                <div class="resulttext">
+                    <div>
+                        <h1>YOU WIN</h1>
+                        <h2>AGAINST PC</h2>
+                        <div class="playagain">
+                            <button id="playagain">PLAY AGAIN</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="compresult">
+                    <h5>PC PICKED</h5>
+                    <br />
+                    <div class="resimage rock" id="compPick">
+                        <img id="compPickImage" src="./images/rock.png" alt="Computer Result" />
+                    </div>
+                </div>
+                &nbsp;
             </div>
         </main>
+        <br />
         <footer>
             <div class="footergamerule">
                 <div class="footercard" id="gameRuleCard">
                     <div class="close" id="gameRuleCloseIcon">
                         <span>&#10006;</span>
                     </div>
-                    <br>
+                    <br />
                     <div class="gamerule">
                         <h2>Game Rules</h2>
                         <ul>
-                            <li><span>Rock beats scissors, scissors beat paper, and paper beats rock.</span></li>
-                            <li><span>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or
-                                    just “rock, paper, scissors.”</span></li>
-                            <li><span>Use rock, paper, scissors to settle minor decisions or simply play to pass the
-                                    time</span></li>
-                            <li><span>If both players lay down the same hand, each player lays down another hand</span>
+                            <li>
+                                <span>Rock beats scissors, scissors beat paper, and paper beats
+                                    rock.</span>
+                            </li>
+                            <li>
+                                <span>Agree ahead of time whether you'll count off “rock, paper,
+                                    scissors, shoot” or just “rock, paper, scissors.”</span>
+                            </li>
+                            <li>
+                                <span>Use rock, paper, scissors to settle minor decisions or
+                                    simply play to pass the time</span>
+                            </li>
+                            <li>
+                                <span>If both players lay down the same hand, each player lays
+                                    down another hand</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div>
                     <span class="button" id="ruleButton">RULES</span>
+                    <span class="button" id="nextButton">NEXT</span>
                 </div>
             </div>
         </footer>

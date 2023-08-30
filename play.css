@@ -1,0 +1,189 @@
+main {
+    margin-top: 50px;
+    position: relative;
+}
+
+.myresult {
+    grid-area: myresult;
+}
+
+.resimage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.winningResult .resimage {
+    margin-top: 20px;
+}
+
+.resimage img {
+    padding: 15px 0px;
+}
+
+.rock {
+    border: 15px solid #0074b6;
+}
+
+.paper {
+    border: 15px solid #ffa943;
+}
+
+.scissor {
+    border: 15px solid #bd00ff;
+}
+
+.compresult {
+    grid-area: compresult;
+}
+
+.resulttext {
+    grid-area: restext;
+}
+
+.resulttext h1 {
+    letter-spacing: 5px;
+}
+
+.resulttext h2 {
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.winningResult {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "myresult restext compresult";
+    color: #fff;
+    width: 60%;
+    margin: auto;
+    justify-items: center;
+    text-align: center;
+    position: relative;
+    display: none;
+}
+
+.resulttext {
+    position: absolute;
+    bottom: 0px;
+}
+
+.playagain {
+    margin-top: 15px;
+}
+
+.playagain button:hover {
+    border: none;
+}
+
+.game {
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.playgame {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.triangle {
+    width: 100%;
+    height: auto;
+    padding: 50px 25px;
+}
+
+.triangleimage {
+    width: 90%;
+}
+
+.rockpaperscissor {
+    width: 100%;
+}
+
+.rockpaperscissor .resimage:nth-child(1) {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.rockpaperscissor .resimage:nth-child(2) {
+    position: absolute;
+    top: 0px;
+    left: 70%;
+}
+
+.rockpaperscissor .resimage:nth-child(3) {
+    position: absolute;
+    left: 33%;
+    bottom: 50px;
+}
+
+.rockpaperscissor .resimage {
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+}
+
+.rockpaperscissor .resimage img {
+    padding: 15px 0px;
+    width: 60%;
+    height: 60%;
+}
+
+
+@media only screen and (max-width: 1140px) {
+    .winningResult {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .winningResult {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 669px) {
+    .resulttext {
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .winningResult {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "myresult compresult"
+            "restext restext";
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    .headercontent {
+        margin-top: 0px;
+    }
+
+    .resulttext {
+        margin: 10px 0px;
+        position: relative;
+    }
+
+    .playagain {
+        margin: 20px 0px 40px 0px;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    
+}
