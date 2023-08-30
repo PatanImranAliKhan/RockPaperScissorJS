@@ -74,7 +74,11 @@ footer {
 }
 
 footer .button {
-    background-color: none;
+    font-size: 17px;
+    margin-right: 20px;
+}
+
+footer .button div {
     border: 2px solid #fff;
     z-index: -2;
     padding: 5px 20px;

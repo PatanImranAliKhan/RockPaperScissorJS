@@ -55,11 +55,12 @@ var userScore = 0, compScore = 0
 initiaizeScores()
 
 function initiaizeScores() {
-    const scores = JSON.parse(localStorage.getItem("RPS_scores")) || {};
+    const scores = JSON.parse(localStorage.getItem("RPS_scores")) || {user:0,computer:0};
     userScore = scores['user']
     compScore = scores['computer']
     userScoreElement.innerHTML = userScore
     compScoreElement.innerHTML = compScore
+    winningResult.style.display = "none"
 }
 
 ruleButton.addEventListener("click", () => {
@@ -74,8 +75,8 @@ gameRuleCloseIcon.addEventListener("click", () => {
 })
 
 playAgain.addEventListener("click", () => {
-    winningResult.style.display="none"
-    gamePlay.style.display="block"
+    winningResult.style.display = "none"
+    gamePlay.style.display = "block"
 })
 
 nextButton.addEventListener("click", () => {
@@ -110,8 +111,8 @@ function calculateResult(userClick) {
     iamSelectedImage.setAttribute("alt", userClick)
     compSelectedImage.setAttribute("src", imagesLink[compAnswer])
     compSelectedImage.setAttribute("alt", compAnswer)
-    myPickClass.className = "resimage "+userClick
-    compPickClass.className = "resimage "+compAnswer
+    myPickClass.className = "resimage " + userClick
+    compPickClass.className = "resimage " + compAnswer
     if (userClick === compAnswer) {
         resultText1.innerHTML = "TIE UP"
         resultText2.style.display = "none"
@@ -122,20 +123,22 @@ function calculateResult(userClick) {
         resultText2.style.display = "block"
         resultButtonText.innerHTML = "PLAY AGAIN"
         nextButton.style.display = "block"
-        userScore+=1
+        myPickClass.className = myPickClass.className + " win"
+        userScore += 1
         setScoreInLocalStorage()
     } else {
         resultText1.innerHTML = "YOU LOST"
         resultText2.style.display = "block"
         resultButtonText.innerHTML = "PLAY AGAIN"
         nextButton.style.display = "none"
-        compScore+=1
+        compPickClass.className = compPickClass.className + " win"
+        compScore += 1
         setScoreInLocalStorage()
     }
 }
 
 function setScoreInLocalStorage() {
-    localStorage.setItem('RPS_scores',JSON.stringify({
+    localStorage.setItem('RPS_scores', JSON.stringify({
         "user": userScore,
         "computer": compScore
     }));

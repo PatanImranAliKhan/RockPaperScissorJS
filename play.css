@@ -58,7 +58,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "myresult restext compresult";
     color: #fff;
-    width: 60%;
+    width: 50%;
     margin: auto;
     justify-items: center;
     text-align: center;
@@ -137,6 +137,12 @@ main {
     height: 60%;
 }
 
+.win {
+    box-shadow:
+      0 0 0 25px #178522c9,
+      0 0 0 50px #1DA82BC9,
+      0 0 0 75px #2E9A2563;
+}
 
 @media only screen and (max-width: 1140px) {
     .winningResult {
@@ -160,6 +166,7 @@ main {
 @media only screen and (max-width: 668px) {
     .winningResult {
         display: grid;
+        width: 100%;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "myresult compresult"
@@ -176,14 +183,11 @@ main {
 
     .resulttext {
         margin: 10px 0px;
+        margin-top: 30px;
         position: relative;
     }
 
     .playagain {
         margin: 20px 0px 40px 0px;
     }
-}
-
-@media only screen and (max-width: 668px) {
-    
 }
