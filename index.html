@@ -57,24 +57,24 @@
                 <div class="myresult">
                     <h5>YOU PICKED</h5>
                     <br />
-                    <div class="resimage paper" id="myPick">
-                        <img src="./images/paper.png" id="myPickImage" alt="My Result" />
+                    <div class="resimage" id="myPick">
+                        <img src="" id="myPickImage" />
                     </div>
                 </div>
                 <div class="resulttext">
                     <div>
-                        <h1>YOU WIN</h1>
-                        <h2>AGAINST PC</h2>
+                        <h1 id="resultText1"></h1>
+                        <h2 id="resultText2">AGAINST PC</h2>
                         <div class="playagain">
-                            <button id="playagain">PLAY AGAIN</button>
+                            <button id="playagain"><span id="resultButtonText">PLAY AGAIN</span></button>
                         </div>
                     </div>
                 </div>
                 <div class="compresult">
                     <h5>PC PICKED</h5>
                     <br />
-                    <div class="resimage rock" id="compPick">
-                        <img id="compPickImage" src="./images/rock.png" alt="Computer Result" />
+                    <div class="resimage" id="compPick">
+                        <img id="compPickImage" src=""  />
                     </div>
                 </div>
                 &nbsp;
@@ -110,9 +110,9 @@
                         </ul>
                     </div>
                 </div>
-                <div>
-                    <span class="button" id="ruleButton">RULES</span>
-                    <span class="button" id="nextButton">NEXT</span>
+                <div class="button" style="display: inline-flex;">
+                    <span id="ruleButton">RULES</span>
+                    <span id="nextButton">NEXT</span>
                 </div>
             </div>
         </footer>
